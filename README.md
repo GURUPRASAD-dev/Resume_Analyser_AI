@@ -1,28 +1,29 @@
-# Resume Analyzer
+# Resume Analyzer AI
 
-This is a simple web application built with **Flask** that allows users to upload resumes in **PDF** or **DOCX** format. The resumes are processed using **Meta AI** to generate a score and provide feedback based on various categories such as **Skills**, **Education**, **Experience**, **Formatting**, and **Impact**. The results are presented to the user in an organized format with recommendations to improve the resume.
+This is a **Flask-based web application** that allows users to upload resumes in **PDF** or **DOCX** format, which are then analyzed using **Meta AI** to generate a score and detailed feedback. The analysis is broken down into various categories, such as **Skills**, **Education**, **Experience**, **Formatting**, and **Impact**. Users also receive actionable recommendations for improving their resumes.
 
 ## Features
 
-- Upload **PDF** or **DOCX** resumes.
-- Process resumes using **Meta AI** for detailed analysis.
-- Get a **resume score** out of 100.
-- Receive detailed feedback, strengths, weaknesses, and recommendations.
-- Beautiful and responsive user interface using **HTML**, **CSS**, and **Bootstrap**.
+- **Upload PDFs or DOCX files**: Accepts common resume formats.
+- **Meta AI analysis**: Provides detailed feedback on resumes using AI.
+- **Detailed scoring**: Resume is scored based on key sections.
+- **Feedback**: Detailed strengths, weaknesses, and improvement recommendations.
+- **Responsive UI**: Built with **HTML**, **CSS**, and **Bootstrap** for a seamless user experience.
 
-## Requirements
+## Technologies Used
 
-- **Flask**: Web framework for Python.
-- **gunicorn**: WSGI server for running Flask applications.
-- **pdfplumber**: Extract text from PDF resumes.
-- **python-docx**: Extract text from DOCX resumes.
-- **meta_ai_api**: Integration with Meta AI for resume analysis.
+- **Flask**: Web framework for Python to build the app.
+- **pdfplumber**: Extracts text from PDF resumes.
+- **python-docx**: Extracts text from DOCX resumes.
+- **Meta AI API**: Provides resume analysis and score.
+- **Bootstrap**: For responsive front-end design.
 
 ## Installation
 
-To set up this project locally:
+To set up this project locally, follow these steps:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/resume-analyzer.git
-   cd resume-analyzer
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/GURUPRASAD-dev/Resume_Analyser_AI.git
+cd Resume_Analyser_AI
