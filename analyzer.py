@@ -32,21 +32,25 @@ def analyze_resume_with_meta_ai(resume_text):
     try:
         ai = MetaAI()
         prompt = (
-            "You are a resume evaluation expert. Analyze the resume provided below and return a structured JSON object "
-            "containing:\n\n"
-            "1. 'overall_score': integer (0–100)\n"
-            "2. 'section_scores': an object with:\n"
-            "    - 'skills': integer (0–100)\n"
-            "    - 'education': integer (0–100)\n"
-            "    - 'experience': integer (0–100)\n"
-            "    - 'formatting': integer (0–100)\n"
-            "    - 'impact': integer (0–100)\n"
-            "3. 'strengths': list of strings summarizing what the resume does well\n"
-            "4. 'weaknesses': list of strings summarizing areas that need improvement\n"
-            "5. 'recommendations': list of suggested improvements\n\n"
-            "Resume:\n"
-            f"{resume_text}"
-        )
+                "You are a resume evaluation expert. Analyze the resume provided below and return a structured JSON object "
+                "containing:\n\n"
+                "1. 'overall_score': integer (0–100) indicating the resume's overall effectiveness\n"
+                "2. 'section_scores': an object with:\n"
+                "    - 'skills': integer (0–100)\n"
+                "    - 'education': integer (0–100)\n"
+                "    - 'experience': integer (0–100)\n"
+                "    - 'formatting': integer (0–100)\n"
+                "    - 'impact': integer (0–100)\n"
+                "3. 'strengths': list of strings summarizing what the resume does well\n"
+                "4. 'weaknesses': list of strings summarizing areas that need improvement\n"
+                "5. 'recommendations': list of suggested improvements\n"
+                "6. 'identified_skills': list of specific technical and soft skills extracted from the resume\n"
+                "7. 'best_fit_technologies': list of technologies or tools this candidate is best suited for (e.g., Python, AWS, React)\n"
+                "8. 'suitable_fields_or_roles': list of job roles or fields the resume is best aligned with "
+                "(e.g., Backend Developer, Data Analyst, DevOps Engineer, etc.)\n\n"
+                "Resume:\n"
+                f"{resume_text}"
+            )
 
         response = ai.prompt(message=prompt)
 
