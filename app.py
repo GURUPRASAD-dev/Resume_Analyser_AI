@@ -28,7 +28,8 @@ def analyze():
     import json
     analysis = json.loads(result_json)
 
-    return render_template('result.html', analysis=analysis)
+    # return render_template('result.html', analysis=analysis)
+    return analysis
 
 if __name__ == '__main__':
     app.run(debug=True)
